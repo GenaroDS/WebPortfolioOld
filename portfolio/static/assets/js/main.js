@@ -113,5 +113,46 @@
 				});
 
 			});
+//Drop down button
 
 })(jQuery);
+
+document.querySelector(".dropdown-btn").addEventListener("click", function(event) {
+	event.stopPropagation(); // Prevent the click event from bubbling up to the document
+	const content = document.querySelector(".dropdown-content");
+	content.style.display = content.style.display === "block" ? "none" : "block";
+  });
+  
+  document.addEventListener("click", function() {
+	const content = document.querySelector(".dropdown-content");
+	content.style.display = "none";
+  });
+
+  document.querySelector(".dropdown-btn").addEventListener("click", function(event) {
+	event.stopPropagation();
+	const content = document.querySelector(".dropdown-content");
+	content.classList.toggle("show");
+  });
+
+  
+
+
+// Smoother animation to my dropdownlist
+document.querySelectorAll(".dropdown-content a").forEach(function(link) {
+	link.addEventListener("click", function(event) {
+	  event.preventDefault();
+	  const targetId = event.currentTarget.getAttribute("href");
+	  const targetElement = document.querySelector(targetId);
+  
+	  // Smooth scrolling using the scrollTo method
+	  window.scrollTo({
+		top: targetElement.offsetTop,
+		behavior: "smooth"
+	  });
+  
+	  // Close the dropdown after clicking the navigation link
+	  const content = document.querySelector(".dropdown-content");
+	  content.classList.remove("show");
+	});
+  });
+  
