@@ -2145,6 +2145,17 @@ input[type="radio"]+label:before {
 
 /* Image */
 
+.image-wrapper {
+    position: relative;
+}
+
+#popup-button {
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .image {
 	border-radius: 0.35em;
 	border: 0;
@@ -2172,6 +2183,12 @@ input[type="radio"]+label:before {
 .image.thumb {
 	text-align: center;
 }
+.image.thumb img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	max-height: 200px;
+  }
 
 .image.thumb:after {
 	-moz-transition: opacity 0.2s ease-in-out;
@@ -2737,10 +2754,10 @@ input[type="button"]:disabled,
 	justify-content: space-between;
 	background-color: #1f1815;
 	background-attachment: scroll, scroll;
-	background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+	background-image: url("images/overlay.png"), url("../../images/realbg.jpg");
 	background-position: top left, top left;
 	background-repeat: repeat, no-repeat;
-	background-size: auto, 150%;
+	background-size: auto, 154%;
 	color: rgba(255, 255, 255, 0.5);
 	height: 100%;
 	left: 0;
@@ -3151,6 +3168,7 @@ body.is-touch .poptrox-popup .closer {
 	#header {
 		padding: 6em 3em 3em 3em;
 		width: 30%;
+		background-size: auto, 235%;
 	}
 
 	#header h1 {
@@ -3472,10 +3490,9 @@ body.is-touch .poptrox-popup .closer {
 	border: none;
 	border-radius: 3px;
 	cursor: pointer;
-	padding: 12px;
+	padding: 10px 12px; 
 	font-size: 16px;
 }
-
 .dropdown-content {
 	display: none;
 	opacity: 0;
