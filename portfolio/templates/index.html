@@ -29,6 +29,7 @@
 						<a href="#one">Home</a>
 						<a href="#two">Projects</a>
 						<a href="#education">Eductation & Courses</a>
+						<a href="#Certificates">Certificates</a>
 						<a href="#three">Contact</a>
 					</div>
 				</div>
@@ -98,7 +99,7 @@
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/01.jpg' %}" data-url="https://github.com/GenaroDS/PingTest" class="image fit thumb"><img
-							src="{% static 'images/thumbs/01.jpg' %}" alt="" /></a>
+							src="{% static 'images/thumbs/tumbtest1.jpg' %}" alt="" /></a>
 					<h3>PingTester App</h3>
 					<p>PingTest is a system tray app built with python for monitoring internet connection quality.</p>
 				</article>
@@ -106,7 +107,7 @@
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/02.jpg' %}" data-url="https://github.com/GenaroDS/VaadinInvetoryStockApp" class="image fit thumb"><img
-							src="{% static 'images/thumbs/02.jpg' %}" alt="" /></a>
+							src="{% static 'images/thumbs/tumbtest2.jpg' %}" alt="" /></a>
 					<h3>Inventory Stock App</h3></a></h3>
 					<p>A Java inventory stock web application with built with Spring data, Security, Hibernate and
 						Vaadin.</p>
@@ -115,7 +116,7 @@
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/03.jpg' %}" data-url="https://github.com/GenaroDS/DoublyLinkedList" class="image fit thumb"><img
-							src="{% static 'images/thumbs/03.jpg' %}" alt="" /></a>
+							src="{% static 'images/thumbs/tumbtest3.jpg' %}" alt="" /></a>
 					<h3>Doubly Linked List</h3>
 					<p>A doubly linked list from scratch(no libraries) with a not so efficcient sorted insertion.</p>
 				</article>
@@ -142,22 +143,36 @@
 					<h3>Universidad Siglo 21:</h3>
 					<h4>Bachelor's degree in Computer Science.</h4>					
 					<ul>
-						<li>Expected year of graduation: 2025</li>
-
 						<li>Currently on third year.</li>
+						<li>Expected year of graduation: 2025.</li>					
 					</ul>
 				</div>
 				<div class="education-item">
 					<h3>University of Helsinki:</h3>
 					<h4>Programming open online courses (MOOCs).</h4>
 					<ul>
-						<li>Python Advanced Programming</li>
-						<li>Java Programming I & II</li>
+						<li>Java Programming I & II.</li>
+						<li>Python Advanced Programming.</li>
+
 					</ul>
 				</div>
 				<!-- Add more education items here -->
 			</div>
 		</section>
+
+		<section id="Certificates">
+			<h2>Certificates</h2>
+			<div class="certificate-container">
+			  <div class="certificate-item">
+				<img src="{% static 'images/java1.png' %}" alt="Java Certificate I" />
+				<h4>Java I</h4>
+			  </div>
+			  <div class="certificate-item">
+				<img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
+				<h4>Java II</h4>
+			  </div>
+			</div>
+		  </section>
 
 		<!-- About Me -->
 
@@ -169,7 +184,7 @@
 				simply answering questions related to my work.</p>
 			<div class="row">
 				<div class="col-8 col-12-small">
-					<form method="post" action="#">
+					<form method="post" action="https://formspree.io/f/xoqzpdra">
 						<div class="row gtr-uniform gtr-50">
 							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name"
 									placeholder="Name" /></div>
@@ -178,10 +193,10 @@
 							<div class="col-12"><textarea name="message" id="message" placeholder="Message"
 									rows="4"></textarea></div>
 						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message" /></li>
+						</ul>
 					</form>
-					<ul class="actions">
-						<li><input type="submit" value="Send Message" /></li>
-					</ul>
 				</div>
 				<div class="col-4 col-12-small">
 					<ul class="labeled-icons">
@@ -220,11 +235,11 @@
 						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 				<li><a href="#three" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 			</ul>
-			<!--<ul class="copyright">
-				<li>&copy; Untitled</li>
+			<ul class="copyright">
+				<li>&copy; Genaro's portfolio</li>
 				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>
-		-->
+		
 		</div>
 	</footer>
 
@@ -238,5 +253,5 @@
 
 </body>
 
-
+1
 </html>
