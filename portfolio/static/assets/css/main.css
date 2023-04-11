@@ -159,6 +159,10 @@ textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+textarea#message {
+    margin-bottom: 1rem;
+	resize: vertical;
+}
 
 /* Basic */
 
@@ -2146,14 +2150,14 @@ input[type="radio"]+label:before {
 /* Image */
 
 .image-wrapper {
-    position: relative;
+	position: relative;
 }
 
 #popup-button {
-    position: absolute;
-    bottom: 1em;
-    left: 50%;
-    transform: translateX(-50%);
+	position: absolute;
+	bottom: 1em;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .image {
@@ -2183,12 +2187,13 @@ input[type="radio"]+label:before {
 .image.thumb {
 	text-align: center;
 }
+
 .image.thumb img {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
 	max-height: 200px;
-  }
+}
 
 .image.thumb:after {
 	-moz-transition: opacity 0.2s ease-in-out;
@@ -2410,6 +2415,23 @@ ul.actions {
 	margin-left: -1em;
 	padding-left: 0;
 }
+.actions input {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.actions input:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.actions .button {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.actions .button:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
 
 ul.actions li {
 	padding: 0 0 0 1em;
@@ -2517,6 +2539,9 @@ ul.actions.fit.stacked {
 	ul.actions:not(.fixed) li .button.icon:before {
 		margin-left: -0.5em;
 	}
+
+	
+
 
 }
 
@@ -2720,6 +2745,7 @@ input[type="button"]:disabled,
 
 .work-item .image {
 	margin: 0 0 1.5em 0;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .work-item h3 {
@@ -3397,28 +3423,26 @@ body.is-touch .poptrox-popup .closer {
 
 }
 
-/* Educationtab */
+/* EDUCATION SECTION ITEMS */
 #education {
 	padding: 2rem 0;
 
 }
 
 .education-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
 .education-item {
-	flex: 1;
-	background-color: transparent;
-	border: 1px solid #e5e5e5;
-	border-radius: 5px;
-	padding: 2rem;
-	box-sizing: border-box;
-	min-width: calc(50% - 1rem);
-	max-width: 500px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
 }
 
 .education-item h3 {
@@ -3453,13 +3477,17 @@ body.is-touch .poptrox-popup .closer {
 	color: #666;
 }
 
-@media screen and (max-width: 768px) {
-	.education-item {
-		min-width: 100%;
-	}
+.item-header {
+    margin-bottom: 10px;
 }
 
-/* About Me Section */
+@media (min-width: 768px) {
+    .education-item {
+        width: calc(50% - 30px);
+    }
+}
+
+/* ABOUT ME SECTION ITEMS */
 #about-me {
 	padding: 3rem 0;
 }
@@ -3476,7 +3504,7 @@ body.is-touch .poptrox-popup .closer {
 	color: #333;
 }
 
-/* dropwon button */
+/* DROPDOWN NAVBAR SECTION ITEMS */
 .dropdown {
 	position: fixed;
 	top: 10px;
@@ -3490,9 +3518,10 @@ body.is-touch .poptrox-popup .closer {
 	border: none;
 	border-radius: 3px;
 	cursor: pointer;
-	padding: 10px 12px; 
+	padding: 10px 12px;
 	font-size: 16px;
 }
+
 .dropdown-content {
 	display: none;
 	opacity: 0;
@@ -3521,55 +3550,80 @@ body.is-touch .poptrox-popup .closer {
 	display: block;
 }
 
-/* CERTIFICATES */
+/* CERTIFICATE SECTION ITEMS */
 #certificates {
 	padding: 2rem 0;
-  }
-  
-  .certificate-container {
+
+}
+
+.certificate-container {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 2rem;
-  }
-  
-  .certificate-item {
+
+}
+
+.certificate-item {
 	flex: 1;
-	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: transparent;
 	min-width: calc(33.333% - 1rem);
 	max-width: 300px;
 	transition: transform 0.3s;
-  }
-  
-  .certificate-item:hover {
+	text-align: center;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.certificate-item:hover {
 	transform: translateY(-10px);
-  }
-  
-  .certificate-item img {
+}
+
+.certificate-item img {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
 	border-radius: 5px;
-  }
-  
-  .certificate-item h3 {
+	border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.certificate-item h3 {
 	margin: 0.5rem 0;
 	padding: 0;
 	font-size: 1.25rem;
 	font-weight: bold;
 	text-align: center;
-  }
-
-  .certificate-item {
-    text-align: center;
-    display: inline-block;
-    margin: 0 10px;
 }
 
 .certificate-item h4 {
-    margin-top: 5px;
+	margin-top: 5px;
 }
-  
+
+
+/* clipbaord SECTION ITEMS */
+
+.copy-tooltip {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0.9;
+}
+
+#phone-number {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#email-address{
+	cursor: pointer;
+}

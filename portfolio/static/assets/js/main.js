@@ -17,7 +17,7 @@
 				parallax: true,
 
 			
-			// Parallax factor (lower = more intense, higher = less intense).
+			// "Parallax factor (lower = more intense, higher = less intense).
 				parallaxFactor: 20
 
 		};
@@ -156,3 +156,32 @@ document.querySelectorAll(".dropdown-content a").forEach(function(link) {
 	});
   });
   
+
+  document.querySelectorAll('.click-to-copy').forEach(element => {
+    element.addEventListener('click', function() {
+        let textToCopy = this.textContent;
+        let textArea = document.createElement('textarea');
+        textArea.value = textToCopy;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+
+        // Show "Copied to clipboard!" message
+        let notification = document.createElement('div');
+        notification.innerText = 'Copied to clipboard!';
+        notification.style.position = 'fixed';
+        notification.style.bottom = '20px';
+        notification.style.right = '20px';
+        notification.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        notification.style.color = 'white';
+        notification.style.padding = '10px 20px';
+        notification.style.borderRadius = '5px';
+        document.body.appendChild(notification);
+
+        // Hide the message after 3 seconds
+        setTimeout(function() {
+            document.body.removeChild(notification);
+        }, 3000);
+    });
+});

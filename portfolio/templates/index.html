@@ -16,7 +16,7 @@
 	<link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
 	<!-- Certificates -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>F
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
 </head>
 
 <body class="is-preload">
@@ -48,7 +48,7 @@
 	<!-- Main -->
 	<div id="main">
 
-		<!-- One -->
+		<!-- About me -->
 		<section id="one">
 			<header class="major">
 				<h2></br>Welcome to my portfolio</h2>
@@ -92,24 +92,27 @@
 				</section>
 
 			</ul>
-			<a href="#two" class="button">Explore my projects</a></li>
+			<ul class="actions">
+				<a href="#two" class="button">Explore my projects</a></li>
+			</ul>
 		</section>
 
-		<!-- Two -->
+		<!-- Recent work tab -->
 		<section id="two">
 			<h2>Recent Work</h2>
 			<div class="row">
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="{% static 'images/fulls/01.jpg' %}" data-url="https://github.com/GenaroDS/PingTest" class="image fit thumb"><img
-							src="{% static 'images/thumbs/tumbtest1.jpg' %}" alt="" /></a>
+					<a href="{% static 'images/fulls/01.jpg' %}" data-url="https://github.com/GenaroDS/PingTest"
+						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest1.jpg' %}" alt="" /></a>
 					<h3>PingTester App</h3>
 					<p>PingTest is a system tray app built with python for monitoring internet connection quality.</p>
 				</article>
 
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="{% static 'images/fulls/02.jpg' %}" data-url="https://github.com/GenaroDS/VaadinInvetoryStockApp" class="image fit thumb"><img
+					<a href="{% static 'images/fulls/02.jpg' %}"
+						data-url="https://github.com/GenaroDS/VaadinInvetoryStockApp" class="image fit thumb"><img
 							src="{% static 'images/thumbs/tumbtest2.jpg' %}" alt="" /></a>
 					<h3>Inventory Stock App</h3></a></h3>
 					<p>A Java inventory stock web application with built with Spring data, Security, Hibernate and
@@ -118,45 +121,50 @@
 
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="{% static 'images/fulls/03.jpg' %}" data-url="https://github.com/GenaroDS/DoublyLinkedList" class="image fit thumb"><img
-							src="{% static 'images/thumbs/tumbtest3.jpg' %}" alt="" /></a>
+					<a href="{% static 'images/fulls/03.jpg' %}" data-url="https://github.com/GenaroDS/DoublyLinkedList"
+						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest3.jpg' %}" alt="" /></a>
 					<h3>Doubly Linked List</h3>
 					<p>A doubly linked list from scratch(no libraries) with a not so efficcient sorted insertion.</p>
 				</article>
 
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="{% static 'images/fulls/04.jpg' %}" data-url="https://github.com/GenaroDS/WebPortfolio" class="image fit thumb"><img
-							src="{% static 'images/thumbs/04.jpg' %}" alt="" /></a>
+					<a href="{% static 'images/fulls/04.jpg' %}" data-url="https://github.com/GenaroDS/WebPortfolio"
+						class="image fit thumb"><img src="{% static 'images/thumbs/04.jpg' %}" alt="" /></a>
 					<h3>Web Portfolio </h3>
 					<p>This same web portfolio, built with Django. The responsive site uses a custom HTML template, JS,
 						CSS.</p>
 				</article>
 			</div>
 			<ul class="actions">
-				<li><a href="https://github.com/GenaroDS" target="_blank" class="button">View my full portfolio on GitHub</a></li>
+				<li><a href="https://github.com/GenaroDS" target="_blank" class="button">View my full portfolio on
+						GitHub</a></li>
 			</ul>
 
 		</section>
 
+		<!-- Education tab -->
 		<section id="education">
 			<h2>Education & Courses</h2>
 			<div class="education-container">
 				<div class="education-item">
-					<h3>Universidad Siglo 21:</h3>
-					<h4>Bachelor's degree in Computer Science.</h4>					
+					<div class="item-header">
+						<h3>Universidad Siglo 21</h3>
+						<h4>Bachelor's degree in Computer Science</h4>
+					</div>
 					<ul>
-						<li>Currently on third year.</li>
-						<li>Expected year of graduation: 2025.</li>					
+						<li>Currently on third year</li>
+						<li>Expected year of graduation: 2025</li>
 					</ul>
 				</div>
 				<div class="education-item">
-					<h3>University of Helsinki:</h3>
-					<h4>Programming open online courses (MOOCs).</h4>
+					<div class="item-header">
+						<h3>University of Helsinki</h3>
+						<h4>Programming open online courses (MOOCs)</h4>
+					</div>
 					<ul>
-						<li>Java Programming I & II.</li>
-						<li>Python Advanced Programming.</li>
-
+						<li>Java Programming I & II</li>
+						<li>Python Advanced Programming</li>
 					</ul>
 				</div>
 				<!-- Add more education items here -->
@@ -183,12 +191,13 @@
 
 		<!-- About Me -->
 
-		<!-- Three -->
+		<!-- Contact me -->
 		<section id="three">
 			<h2>Contact me</h2>
 			<p>If you have any questions or wish to get in touch with me, please don't hesitate to use the contact
-				form below. I am always open to discussing potential projects, collaboration opportunities, or
-				simply answering questions related to my work.</p>
+				form below, also you can click on my email address/phone number to automatically copy them to your clipboard.
+				I'm always open to discussing potential projects, collaboration opportunities, or
+				simply answering questions related to my work. </p>
 			<div class="row">
 				<div class="col-8 col-12-small">
 					<form method="post" action="https://formspree.io/f/xoqzpdra">
@@ -209,17 +218,18 @@
 					<ul class="labeled-icons">
 						<li>
 							<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-							Rosario, CP 2000<br />
+							Rosario, Santa Fe<br />
 							Argentina
 						</li>
 						<li>
 							<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-							+54-336-4686925
+							<span id="phone-number" class="click-to-copy">+54-336-4686925</span>
 						</li>
 						<li>
 							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-							<a href="#">genarodistilio@gmail.com</a>
+							<span id="email-address" class="click-to-copy">genarodistilio@gmail.com</span>
 						</li>
+						
 					</ul>
 				</div>
 			</div>
@@ -246,9 +256,10 @@
 				<li>&copy; Genaro's portfolio</li>
 				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>
-		
+
 		</div>
 	</footer>
+
 
 	<!-- Scripts -->
 	<script src="{% static 'assets/js/jquery.min.js' %}"></script>
@@ -258,16 +269,75 @@
 	<script src="{% static 'assets/js/util.js' %}"></script>
 	<script src="{% static 'assets/js/main.js' %}"></script>
 
-	<!-- Certificates -->
+
+	<!-- Certificates Scripts -->
 	<script>
-		document.addEventListener('DOMContentLoaded', function() {
+		document.addEventListener('DOMContentLoaded', function () {
 			baguetteBox.run('.certificate-container', {
-				captions: true,
+				caSptions: true,
 			});
 		});
 	</script>
 
+	<!-- Clipboard  Scripts -->
+	<script>
+		function copyEmailToClipboard() {
+			const email = document.getElementById('emailToCopy').textContent;
+			const textArea = document.createElement('textarea');
+			textArea.value = email;
+			document.body.appendChild(textArea);
+			textArea.select();
+			document.execCommand('copy');
+			document.body.removeChild(textArea);
+
+			// Show tooltip
+			showTooltip();
+		}
+
+		function showTooltip() {
+			const tooltip = document.createElement('div');
+			tooltip.classList.add('copy-tooltip');
+			tooltip.textContent = 'Copied to clipboard!';
+			document.body.appendChild(tooltip);
+			setTimeout(() => {
+				document.body.removeChild(tooltip);
+			}, 2000);
+		}
+	</script>
+
+	<script>
+		document.querySelectorAll('.click-to-copy').forEach(element => {
+			element.addEventListener('click', function () {
+				let textToCopy = this.textContent;
+				let textArea = document.createElement('textarea');
+				textArea.value = textToCopy;
+				document.body.appendChild(textArea);
+				textArea.select();
+				document.execCommand('copy');
+				document.body.removeChild(textArea);
+
+				// Show "Copied to clipboard!" message
+				let notification = document.createElement('div');
+				notification.innerText = 'Copied to clipboard!';
+				notification.style.position = 'fixed';
+				notification.style.bottom = '20px';
+				notification.style.right = '20px';
+				notification.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+				notification.style.color = 'white';
+				notification.style.padding = '10px 20px';
+				notification.style.borderRadius = '5px';
+				document.body.appendChild(notification);
+
+				// Hide the message after 3 seconds
+				setTimeout(function () {
+					document.body.removeChild(notification);
+				}, 3000);
+			});
+		});
+	</script>
+
+
 </body>
 
-1
+
 </html>
