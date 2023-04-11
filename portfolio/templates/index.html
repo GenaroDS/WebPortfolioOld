@@ -14,6 +14,9 @@
 	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 	<link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+	<!-- Certificates -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>F
 </head>
 
 <body class="is-preload">
@@ -122,7 +125,6 @@
 				</article>
 
 
-
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/04.jpg' %}" data-url="https://github.com/GenaroDS/WebPortfolio" class="image fit thumb"><img
 							src="{% static 'images/thumbs/04.jpg' %}" alt="" /></a>
@@ -132,8 +134,9 @@
 				</article>
 			</div>
 			<ul class="actions">
-				<li><a href="https://github.com/GenaroDS" target="_blank" class="button">View my full portfolio</a></li>
+				<li><a href="https://github.com/GenaroDS" target="_blank" class="button">View my full portfolio on GitHub</a></li>
 			</ul>
+
 		</section>
 
 		<section id="education">
@@ -163,16 +166,20 @@
 		<section id="Certificates">
 			<h2>Certificates</h2>
 			<div class="certificate-container">
-			  <div class="certificate-item">
-				<img src="{% static 'images/java1.png' %}" alt="Java Certificate I" />
-				<h4>Java I</h4>
-			  </div>
-			  <div class="certificate-item">
-				<img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
-				<h4>Java II</h4>
-			  </div>
+				<div class="certificate-item">
+					<a href="{% static 'images/java1.png' %}" data-caption="Java I">
+						<img src="{% static 'images/java1.png' %}" alt="Java Certificate I" />
+						<h4>Java I</h4>
+					</a>
+				</div>
+				<div class="certificate-item">
+					<a href="{% static 'images/java2.png' %}" data-caption="Java II">
+						<img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
+						<h4>Java II</h4>
+					</a>
+				</div>
 			</div>
-		  </section>
+		</section>
 
 		<!-- About Me -->
 
@@ -250,6 +257,15 @@
 	<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
 	<script src="{% static 'assets/js/util.js' %}"></script>
 	<script src="{% static 'assets/js/main.js' %}"></script>
+
+	<!-- Certificates -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			baguetteBox.run('.certificate-container', {
+				captions: true,
+			});
+		});
+	</script>
 
 </body>
 

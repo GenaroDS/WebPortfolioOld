@@ -3562,4 +3562,14 @@ body.is-touch .poptrox-popup .closer {
 	font-weight: bold;
 	text-align: center;
   }
+
+  .certificate-item {
+    text-align: center;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.certificate-item h4 {
+    margin-top: 5px;
+}
   
