@@ -155,10 +155,35 @@ document.querySelectorAll(".dropdown-content a").forEach(function(link) {
 	  content.classList.remove("show");
 	});
   });
-  
 
-  document.querySelectorAll('.click-to-copy').forEach(element => {
-    element.addEventListener('click', function() {
+
+// Clipboard scripts
+
+function copyEmailToClipboard() {
+    const email = document.getElementById('emailToCopy').textContent;
+    const textArea = document.createElement('textarea');
+    textArea.value = email;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+
+    // Show tooltip
+    showTooltip();
+}
+
+function showTooltip() {
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('copy-tooltip');
+    tooltip.textContent = 'Copied to clipboard!';
+    document.body.appendChild(tooltip);
+    setTimeout(() => {
+        document.body.removeChild(tooltip);
+    }, 2000);
+}
+
+document.querySelectorAll('.click-to-copy').forEach(element => {
+    element.addEventListener('click', function () {
         let textToCopy = this.textContent;
         let textArea = document.createElement('textarea');
         textArea.value = textToCopy;
@@ -180,8 +205,48 @@ document.querySelectorAll(".dropdown-content a").forEach(function(link) {
         document.body.appendChild(notification);
 
         // Hide the message after 3 seconds
-        setTimeout(function() {
+        setTimeout(function () {
             document.body.removeChild(notification);
         }, 3000);
     });
 });
+
+// Smooth button move
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+function scrollGallery(direction) {
+	const container = document.querySelector('.certificate-container');
+	const scrollAmount = container.clientWidth / 2;
+  
+	if (direction === 'left') {
+	  container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+	} else {
+	  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+	}
+  }
+
+  function updateArrowsVisibility() {
+	const container = document.querySelector('.certificate-container');
+	const leftArrow = document.querySelector('.scroll-left');
+	const rightArrow = document.querySelector('.scroll-right');
+  
+	leftArrow.style.display = container.scrollLeft > 0 ? 'flex' : 'none';
+	rightArrow.style.display = container.scrollLeft + container.clientWidth < container.scrollWidth ? 'flex' : 'none';
+  }
+  
+  document.querySelector('.certificate-container').addEventListener('scroll', updateArrowsVisibility);
+  window.addEventListener('resize', updateArrowsVisibility);
+  window.addEventListener('DOMContentLoaded', updateArrowsVisibility);
+  
+  
+  

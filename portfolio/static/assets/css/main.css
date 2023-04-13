@@ -159,8 +159,9 @@ textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
 textarea#message {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 	resize: vertical;
 }
 
@@ -2339,6 +2340,15 @@ dl {
 	margin: 5px;
 }
 
+#skills .icon-list i {
+	filter: url(#icon-shadow);
+	transition: filter 0.3s;
+}
+
+#skills .icon-list i:hover {
+	filter: url(#icon-shadow);
+}
+
 @media screen and (max-width: 480px) {
 	#skills .icon-list li {
 		flex-basis: calc(33.3333% - 10px);
@@ -2346,6 +2356,8 @@ dl {
 		text-align: center;
 	}
 }
+
+
 
 
 /* Icons */
@@ -2415,22 +2427,23 @@ ul.actions {
 	margin-left: -1em;
 	padding-left: 0;
 }
+
 .actions input {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease-in-out;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+	transition: box-shadow 0.3s ease-in-out;
 }
 
 .actions input:hover {
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
 .actions .button {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease-in-out;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+	transition: box-shadow 0.3s ease-in-out;
 }
 
 .actions .button:hover {
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
 ul.actions li {
@@ -2540,7 +2553,7 @@ ul.actions.fit.stacked {
 		margin-left: -0.5em;
 	}
 
-	
+
 
 
 }
@@ -2742,6 +2755,7 @@ input[type="button"]:disabled,
 .work-item {
 	margin: 0 0 2em 0;
 }
+
 
 .work-item .image {
 	margin: 0 0 1.5em 0;
@@ -3430,19 +3444,26 @@ body.is-touch .poptrox-popup .closer {
 }
 
 .education-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+	padding-top: 10px;
 }
 
 .education-item {
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    width: 100%;
-    max-width: 400px;
+	background-color: transparent;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 400px;
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+
+.education-item:hover {
+	transform: translateY(-10px);
 }
 
 .education-item h3 {
@@ -3478,13 +3499,13 @@ body.is-touch .poptrox-popup .closer {
 }
 
 .item-header {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
-    .education-item {
-        width: calc(50% - 30px);
-    }
+	.education-item {
+		width: calc(50% - 30px);
+	}
 }
 
 /* ABOUT ME SECTION ITEMS */
@@ -3550,22 +3571,63 @@ body.is-touch .poptrox-popup .closer {
 	display: block;
 }
 
+
+/* clipbaord SECTION ITEMS */
+
+.copy-tooltip {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 10px 20px;
+	background-color: #333;
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	border-radius: 5px;
+	z-index: 1000;
+	opacity: 0.9;
+}
+
+#phone-number {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#email-address {
+	cursor: pointer;
+}
+
 /* CERTIFICATE SECTION ITEMS */
 #certificates {
 	padding: 2rem 0;
 
 }
 
+.certificate-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-top: 30px; /* Adjust this value to create the necessary space for the header */
+	overflow: hidden;
+  }
+
 .certificate-container {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 2rem;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	/* Change this from 'center' to 'flex-start' */
+	overflow-x: auto;
+	flex: 1;
+	padding-top: 10px;
+	/* Add this line */
+}
 
+.certificate-container::-webkit-scrollbar {
+	display: none;
 }
 
 .certificate-item {
-	flex: 1;
+	flex: 0 0 auto;
 	flex-direction: column;
 	align-items: center;
 	background-color: transparent;
@@ -3573,8 +3635,8 @@ body.is-touch .poptrox-popup .closer {
 	max-width: 300px;
 	transition: transform 0.3s;
 	text-align: center;
-	display: inline-block;
 	margin: 0 10px;
+	box-sizing: border-box;
 }
 
 .certificate-item:hover {
@@ -3587,7 +3649,7 @@ body.is-touch .poptrox-popup .closer {
 	object-fit: cover;
 	border-radius: 5px;
 	border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .certificate-item h3 {
@@ -3603,27 +3665,50 @@ body.is-touch .poptrox-popup .closer {
 }
 
 
-/* clipbaord SECTION ITEMS */
-
-.copy-tooltip {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 5px;
-    z-index: 1000;
-    opacity: 0.9;
-}
-
-#phone-number {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#email-address{
+.scroll-btn {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: rgb(7, 7, 7);
+	border: none;
+	border-radius: 50%;
+	font-size: 24px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
 	cursor: pointer;
+	z-index: 1000;
+	margin: 0 10px;
+}
+
+
+.scroll-btn:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.scroll-left {
+	left: 0;
+}
+
+.scroll-right {
+	right: 0;
+}
+.scroll-left,
+.scroll-right {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.205);
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.scroll-left:hover,
+.scroll-right:hover {
+  background: rgba(49, 49, 49, 0.603);
 }

@@ -11,19 +11,21 @@
 	<title>Genaro's Website</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 	<link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
-	<!-- Certificates -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 </head>
 
 <body class="is-preload">
-
 	<!-- Header -->
 	<header id="header">
-
 		<div class="inner">
 			<nav>
 				<div class="dropdown">
@@ -41,25 +43,23 @@
 			<h1><strong>I'm Genaro Di Stilio. </strong><br /> Software developer and <br /> computer science
 				student.<br /></h1>
 			<br />
-
 		</div>
 	</header>
 
 	<!-- Main -->
 	<div id="main">
 
-		<!-- About me -->
+		<!-- About me tab-->
 		<section id="one">
 			<header class="major">
 				<h2></br>Welcome to my portfolio</h2>
 			</header>
-			<p> Below you will find links to my latest projects as well as my education, courses and contact
+			<p> Below you will find links to my latest work as well as my education, courses and contact
 				information.
-				My goal with this website is not only to expand my knowledge in software development but also to present
-				my skills
-				and projects in a way that is both informative and engaging. </br>
-				As I develop more projects, they will be added to this page. Thank you for taking the time to visit my
-				portfolio, and I hope you find it interesting.</p>
+				My goal with this website is not only to expand my knowledge in software development but also to showcase
+				my skills and projects. </br>
+				As I create additional applications, they will be incorporated into this page. 
+				Thank you for taking the time to explore my portfolio, and I hope you find it interesting.</p>
 			<h3>Tools and technologies:</h3>
 			<ul class="actions">
 				<section id="skills">
@@ -75,20 +75,6 @@
 						<li><i class="devicon-javascript-plain icon-3x"></i></li>
 						<li><i class="devicon-git-plain icon-3x"></i></li>
 					</ul>
-					<style>
-						#skills .icon-list {
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							margin: 0;
-							padding: 0;
-						}
-
-						#skills .icon-list li {
-							list-style: none;
-							margin: 0 5px;
-						}
-					</style>
 				</section>
 
 			</ul>
@@ -97,18 +83,16 @@
 			</ul>
 		</section>
 
-		<!-- Recent work tab -->
+		<!-- Work tab -->
 		<section id="two">
 			<h2>Recent Work</h2>
 			<div class="row">
-
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/01.jpg' %}" data-url="https://github.com/GenaroDS/PingTest"
 						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest1.jpg' %}" alt="" /></a>
 					<h3>PingTester App</h3>
 					<p>PingTest is a system tray app built with python for monitoring internet connection quality.</p>
 				</article>
-
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/02.jpg' %}"
@@ -119,14 +103,12 @@
 						Vaadin.</p>
 				</article>
 
-
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/03.jpg' %}" data-url="https://github.com/GenaroDS/DoublyLinkedList"
 						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest3.jpg' %}" alt="" /></a>
 					<h3>Doubly Linked List</h3>
 					<p>A doubly linked list from scratch(no libraries) with a not so efficcient sorted insertion.</p>
 				</article>
-
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/04.jpg' %}" data-url="https://github.com/GenaroDS/WebPortfolio"
@@ -160,42 +142,61 @@
 				<div class="education-item">
 					<div class="item-header">
 						<h3>University of Helsinki</h3>
-						<h4>Programming open online courses (MOOCs)</h4>
+						<h4>Massive open online courses (MOOCs)</h4>
 					</div>
 					<ul>
 						<li>Java Programming I & II</li>
 						<li>Python Advanced Programming</li>
 					</ul>
 				</div>
-				<!-- Add more education items here -->
 			</div>
 		</section>
 
+		<!-- Certificates tab-->
 		<section id="Certificates">
 			<h2>Certificates</h2>
-			<div class="certificate-container">
-				<div class="certificate-item">
-					<a href="{% static 'images/java1.png' %}" data-caption="Java I">
-						<img src="{% static 'images/java1.png' %}" alt="Java Certificate I" />
-						<h4>Java I</h4>
-					</a>
-				</div>
-				<div class="certificate-item">
-					<a href="{% static 'images/java2.png' %}" data-caption="Java II">
-						<img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
-						<h4>Java II</h4>
-					</a>
-				</div>
+			<div class="certificate-wrapper">
+				<button class="scroll-btn scroll-left" onclick="scrollGallery('left')">&lt;</button>
+				<div class="certificate-container">
+			  <div class="certificate-item">
+				<a href="{% static 'images/java1.png' %}" data-fancybox="gallery" data-caption="Java I">
+				  <img src="{% static 'images/java1.png' %}" alt="Java Certificate I" />
+				  <h4>Java I</h4>
+				</a>
+			  </div>
+			  <div class="certificate-item">
+				<a href="{% static 'images/java2.png' %}" data-fancybox="gallery" data-caption="Java II">
+				  <img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
+				  <h4>Java II</h4>
+				</a>
+			  </div>
+			  <div class="certificate-item">
+				<a href="{% static 'images/java2.png' %}" data-fancybox="gallery" data-caption="Java II">
+				  <img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
+				  <h4>Java II</h4>
+				</a>
+			  </div>
+			  <div class="certificate-item">
+				<a href="{% static 'images/java2.png' %}" data-fancybox="gallery" data-caption="Java II">
+				  <img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
+				  <h4>Java II</h4>
+				</a>
+			  </div>
+			  <!-- Add other certificate items here -->
 			</div>
-		</section>
+			<button class="scroll-btn scroll-right" onclick="scrollGallery('right')">&gt;</button>
+		</div>
+	  </section>
+		  
+		  
 
-		<!-- About Me -->
 
 		<!-- Contact me -->
 		<section id="three">
 			<h2>Contact me</h2>
 			<p>If you have any questions or wish to get in touch with me, please don't hesitate to use the contact
-				form below, also you can click on my email address/phone number to automatically copy them to your clipboard.
+				form below, also you can click on my email address/phone number to automatically copy them to your
+				clipboard.
 				I'm always open to discussing potential projects, collaboration opportunities, or
 				simply answering questions related to my work. </p>
 			<div class="row">
@@ -229,7 +230,7 @@
 							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
 							<span id="email-address" class="click-to-copy">genarodistilio@gmail.com</span>
 						</li>
-						
+
 					</ul>
 				</div>
 			</div>
@@ -269,72 +270,21 @@
 	<script src="{% static 'assets/js/util.js' %}"></script>
 	<script src="{% static 'assets/js/main.js' %}"></script>
 
+	<!-- Filters? -->
 
-	<!-- Certificates Scripts -->
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			baguetteBox.run('.certificate-container', {
-				caSptions: true,
-			});
-		});
-	</script>
+	<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+		<filter id="icon-shadow">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+			<feOffset dx="0" dy="0" result="offsetblur" />
+			<feFlood flood-color="rgba(0, 0, 0, 0.15)" />
+			<feComposite in2="offsetblur" operator="in" />
+			<feMerge>
+				<feMergeNode />
+				<feMergeNode in="SourceGraphic" />
+			</feMerge>
+		</filter>
+	</svg>
 
-	<!-- Clipboard  Scripts -->
-	<script>
-		function copyEmailToClipboard() {
-			const email = document.getElementById('emailToCopy').textContent;
-			const textArea = document.createElement('textarea');
-			textArea.value = email;
-			document.body.appendChild(textArea);
-			textArea.select();
-			document.execCommand('copy');
-			document.body.removeChild(textArea);
-
-			// Show tooltip
-			showTooltip();
-		}
-
-		function showTooltip() {
-			const tooltip = document.createElement('div');
-			tooltip.classList.add('copy-tooltip');
-			tooltip.textContent = 'Copied to clipboard!';
-			document.body.appendChild(tooltip);
-			setTimeout(() => {
-				document.body.removeChild(tooltip);
-			}, 2000);
-		}
-	</script>
-
-	<script>
-		document.querySelectorAll('.click-to-copy').forEach(element => {
-			element.addEventListener('click', function () {
-				let textToCopy = this.textContent;
-				let textArea = document.createElement('textarea');
-				textArea.value = textToCopy;
-				document.body.appendChild(textArea);
-				textArea.select();
-				document.execCommand('copy');
-				document.body.removeChild(textArea);
-
-				// Show "Copied to clipboard!" message
-				let notification = document.createElement('div');
-				notification.innerText = 'Copied to clipboard!';
-				notification.style.position = 'fixed';
-				notification.style.bottom = '20px';
-				notification.style.right = '20px';
-				notification.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-				notification.style.color = 'white';
-				notification.style.padding = '10px 20px';
-				notification.style.borderRadius = '5px';
-				document.body.appendChild(notification);
-
-				// Hide the message after 3 seconds
-				setTimeout(function () {
-					document.body.removeChild(notification);
-				}, 3000);
-			});
-		});
-	</script>
 
 
 </body>
