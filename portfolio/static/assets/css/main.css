@@ -2154,11 +2154,16 @@ input[type="radio"]+label:before {
 	position: relative;
 }
 
+.image-fit-thumb:hover {
+	
+	
+}
+
 #popup-button {
 	position: absolute;
 	bottom: 1em;
 	left: 50%;
-	transform: translateX(-50%);
+	transform: translateX(-50%);	
 }
 
 .image {
@@ -2972,6 +2977,7 @@ input[type="button"]:disabled,
 	}
 }
 
+/* Poptrox class */
 .poptrox-popup {
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
@@ -3019,17 +3025,30 @@ input[type="button"]:disabled,
 }
 
 .poptrox-popup .caption {
-	background: #fff;
-	bottom: 0;
-	cursor: default;
-	font-size: 0.9em;
-	height: 3em;
-	left: 0;
-	line-height: 2.8em;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	z-index: 1;
+    background: #fff;
+    bottom: 0;
+    cursor: default;
+    font-size: 0.9em;
+    height: 3em;
+    left: 0;
+    line-height: 2.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    padding-top: 0.4em;
+    box-sizing: border-box;
+}
+
+.poptrox-popup .caption a.button {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.1em 1em;
+    line-height: 1.2;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+    top: -9px; /* Move the button 20 pixels up */
 }
 
 .poptrox-popup .nav-next,
@@ -3607,7 +3626,7 @@ body.is-touch .poptrox-popup .closer {
 	position: relative;
 	display: flex;
 	align-items: center;
-	margin-top: 30px; /* Adjust this value to create the necessary space for the header */
+	margin-top: 30px; 
 	overflow: hidden;
   }
 
@@ -3615,11 +3634,9 @@ body.is-touch .poptrox-popup .closer {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: flex-start;
-	/* Change this from 'center' to 'flex-start' */
 	overflow-x: auto;
 	flex: 1;
 	padding-top: 10px;
-	/* Add this line */
 }
 
 .certificate-container::-webkit-scrollbar {
@@ -3667,6 +3684,7 @@ body.is-touch .poptrox-popup .closer {
 
 .scroll-btn {
 	position: relative;
+	top: +101px;
 	background-color: rgba(0, 0, 0, 0.5);
 	color: rgb(7, 7, 7);
 	border: none;
@@ -3712,3 +3730,59 @@ body.is-touch .poptrox-popup .closer {
 .scroll-right:hover {
   background: rgba(49, 49, 49, 0.603);
 }
+
+/* POPTROX BUTTON */
+.repo-button {
+    display: inline-block;
+    margin: 0 0.5em;
+    padding: 0.5em 1em;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-radius: 0.35em;
+    position: relative;
+    z-index: 10;
+}
+
+.repo-button:hover {
+    background-color: #333;
+    border-color: #333;
+}
+.inline-button {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.caption span {
+    vertical-align: middle;
+}
+
+
+/* Python certificates now emited tooltip */
+.tooltip-icon {
+    position: relative;
+    font-size: 22px; /* Adjust this value to change the size of the icon */
+	color: #18181879;
+}
+
+.tooltip-icon:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    white-space: nowrap;
+    z-index: 10;
+    padding: 10px;
+    background-color: #1818187e;
+    color: #fff;
+    border-radius: 5px;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16px; /* And this to the same size */
+	font-weight: 100;
+}
+
+
+/*TEST*/

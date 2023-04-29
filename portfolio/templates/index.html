@@ -11,13 +11,13 @@
 	<title>Genaro's Website</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 	<link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
-
-
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
@@ -31,11 +31,11 @@
 				<div class="dropdown">
 					<button class="dropdown-btn">&#9776;</button>
 					<div class="dropdown-content">
-						<a href="#one">Home</a>
-						<a href="#two">Projects</a>
+						<a href="#me">Home</a>
+						<a href="#projects">Projects</a>
 						<a href="#education">Eductation & Courses</a>
-						<a href="#Certificates">Certificates</a>
-						<a href="#three">Contact</a>
+						<a href="#certificates">Certificates</a>
+						<a href="#contact">Contact</a>
 					</div>
 				</div>
 			</nav>
@@ -50,15 +50,16 @@
 	<div id="main">
 
 		<!-- About me tab-->
-		<section id="one">
+		<section id="me">
 			<header class="major">
 				<h2></br>Welcome to my portfolio</h2>
 			</header>
 			<p> Below you will find links to my latest work as well as my education, courses and contact
 				information.
-				My goal with this website is not only to expand my knowledge in software development but also to showcase
+				My goal with this website is not only to expand my knowledge in software development but also to
+				showcase
 				my skills and projects. </br>
-				As I create additional applications, they will be incorporated into this page. 
+				As I create additional applications, they will be incorporated into this page.
 				Thank you for taking the time to explore my portfolio, and I hope you find it interesting.</p>
 			<h3>Tools and technologies:</h3>
 			<ul class="actions">
@@ -79,50 +80,52 @@
 
 			</ul>
 			<ul class="actions">
-				<a href="#two" class="button">Explore my projects</a></li>
+				<a href="#projects" class="button">Explore my projects</a></li>
 			</ul>
 		</section>
 
 		<!-- Work tab -->
-		<section id="two">
+		<section id="projects">
 			<h2>Recent Work</h2>
 			<div class="row">
-				<article class="col-6 col-12-xsmall work-item">
+				<article class="col-6 col-12-xsmall work-item" data-repo-url="https://github.com/GenaroDS/PingTest">
 					<a href="{% static 'images/fulls/01.jpg' %}" data-url="https://github.com/GenaroDS/PingTest"
 						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest1.jpg' %}" alt="" /></a>
 					<h3>PingTester App</h3>
-					<p>PingTest is a system tray app built with python for monitoring internet connection quality.</p>
+					<p>PingTest is a a clean and lightweight application that monitors network performance through
+						customizable ping tests, providing real-time system tray updates and statistics.</p>
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/02.jpg' %}"
 						data-url="https://github.com/GenaroDS/VaadinInvetoryStockApp" class="image fit thumb"><img
 							src="{% static 'images/thumbs/tumbtest2.jpg' %}" alt="" /></a>
-					<h3>Inventory Stock App</h3></a></h3>
-					<p>A Java inventory stock web application with built with Spring data, Security, Hibernate and
-						Vaadin.</p>
+					<h3>Web Inventory Stock App</h3></a></h3>
+					<p>An inventory stock responsive web application that features both authorization and authentication
+						for users, as well as full CRUD
+						functionality for managing users and items.</p>
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/03.jpg' %}" data-url="https://github.com/GenaroDS/DoublyLinkedList"
 						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest3.jpg' %}" alt="" /></a>
 					<h3>Doubly Linked List</h3>
-					<p>A doubly linked list from scratch(no libraries) with a not so efficcient sorted insertion.</p>
+					<p>Doubly linked list built from scratch without libraries, with sorted insertion by product code,
+						featuring error handling and a graphic console output.</p>
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="{% static 'images/fulls/04.jpg' %}" data-url="https://github.com/GenaroDS/WebPortfolio"
-						class="image fit thumb"><img src="{% static 'images/thumbs/04.jpg' %}" alt="" /></a>
-					<h3>Web Portfolio </h3>
-					<p>This same web portfolio, built with Django. The responsive site uses a custom HTML template, JS,
-						CSS.</p>
+					<a href="{% static 'images/fulls/04.jpg' %}" data-url="https://github.com/GenaroDS/PureJavaStockApp"
+						class="image fit thumb"><img src="{% static 'images/thumbs/thumbtest4.jpg' %}" alt="" /></a>
+					<h3>Java Stock App</h3>
+					<p>A simple desktop inventory stock application using java, MySql relational data
+						and gluon scenebuilder with fxml files for the Graphical Interface</p>
 				</article>
 			</div>
 			<ul class="actions">
 				<li><a href="https://github.com/GenaroDS" target="_blank" class="button">View my full portfolio on
 						GitHub</a></li>
 			</ul>
-
 		</section>
 
 		<!-- Education tab -->
@@ -135,68 +138,64 @@
 						<h4>Bachelor's degree in Computer Science</h4>
 					</div>
 					<ul>
-						<li>Currently on third year</li>
-						<li>Expected year of graduation: 2025</li>
+						<li>Third year in progress</li>
+						<li>Systems Analysis Associate degree anticipated in late 2023</li>
+						<li>Graduation expected in 2025</li>
 					</ul>
 				</div>
 				<div class="education-item">
 					<div class="item-header">
-						<h3>University of Helsinki</h3>
-						<h4>Massive open online courses (MOOCs)</h4>
+						<h3>University of Helsinki & Coursera</h3>
+						<h4>Massive open online courses (MOOCs) / Cisco Academy</h4>
 					</div>
 					<ul>
 						<li>Java Programming I & II</li>
 						<li>Python Advanced Programming</li>
+						<li>Internet Connection: How to Get Online</li>
 					</ul>
 				</div>
 			</div>
 		</section>
 
 		<!-- Certificates tab-->
-		<section id="Certificates">
-			<h2>Certificates</h2>
+		<section id="certificates">
+			<h2>Certificates <i class="fas fa-exclamation-circle tooltip-icon"
+					data-tooltip="Python certificates are awaiting issuance. "></i>
+				<!-- Once available, I'll add them to this section. -->
+			</h2>
 			<div class="certificate-wrapper">
+
 				<button class="scroll-btn scroll-left" onclick="scrollGallery('left')">&lt;</button>
 				<div class="certificate-container">
-			  <div class="certificate-item">
-				<a href="{% static 'images/java1.png' %}" data-fancybox="gallery" data-caption="Java I">
-				  <img src="{% static 'images/java1.png' %}" alt="Java Certificate I" />
-				  <h4>Java I</h4>
-				</a>
-			  </div>
-			  <div class="certificate-item">
-				<a href="{% static 'images/java2.png' %}" data-fancybox="gallery" data-caption="Java II">
-				  <img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
-				  <h4>Java II</h4>
-				</a>
-			  </div>
-			  <div class="certificate-item">
-				<a href="{% static 'images/java2.png' %}" data-fancybox="gallery" data-caption="Java II">
-				  <img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
-				  <h4>Java II</h4>
-				</a>
-			  </div>
-			  <div class="certificate-item">
-				<a href="{% static 'images/java2.png' %}" data-fancybox="gallery" data-caption="Java II">
-				  <img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
-				  <h4>Java II</h4>
-				</a>
-			  </div>
-			  <!-- Add other certificate items here -->
+					<div class="certificate-item">
+						<a href="{% static 'images/java1.png' %}" class="poptrox-item" data-caption="Java I">
+							<img src="{% static 'images/java1.png' %}" alt="Java Certificate I" />
+							<h4>Java I</h4>
+						</a>
+					</div>
+					<div class="certificate-item">
+						<a href="{% static 'images/java2.png' %}" class="poptrox-item" data-caption="Java II">
+							<img src="{% static 'images/java2.png' %}" alt="Java Certificate II" />
+							<h4>Java II</h4>
+						</a>
+					</div>
+					<div class="certificate-item">
+						<a href="{% static 'images/cisco.png' %}" class="poptrox-item" data-caption="Cisco">
+							<img src="{% static 'images/cisco.png' %}" alt="Cisco Certificate" />
+							<h4>Cisco</h4>
+						</a>
+					</div>
+				</div>
+				<button class="scroll-btn scroll-right" onclick="scrollGallery('right')">&gt;</button>
 			</div>
-			<button class="scroll-btn scroll-right" onclick="scrollGallery('right')">&gt;</button>
-		</div>
-	  </section>
-		  
-		  
-
+		</section>
 
 		<!-- Contact me -->
-		<section id="three">
+		<section id="contact">
 			<h2>Contact me</h2>
 			<p>If you have any questions or wish to get in touch with me, please don't hesitate to use the contact
 				form below, also you can click on my email address/phone number to automatically copy them to your
-				clipboard.
+				clipboard.<br>
 				I'm always open to discussing potential projects, collaboration opportunities, or
 				simply answering questions related to my work. </p>
 			<div class="row">
@@ -236,7 +235,8 @@
 			</div>
 		</section>
 
-
+		<!-- Tester -->
+		
 
 	</div>
 
@@ -251,7 +251,7 @@
 							class="label">Github</span></a></li>
 				<li><a href="https://www.linkedin.com/in/genarods/" target="_blank"
 						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-				<li><a href="#three" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="#contact" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 			</ul>
 			<ul class="copyright">
 				<li>&copy; Genaro's portfolio</li>
@@ -271,7 +271,6 @@
 	<script src="{% static 'assets/js/main.js' %}"></script>
 
 	<!-- Filters? -->
-
 	<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
 		<filter id="icon-shadow">
 			<feGaussianBlur in="SourceAlpha" stdDeviation="3" />
