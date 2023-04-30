@@ -86,42 +86,87 @@
 
 		<!-- Work tab -->
 		<section id="projects">
-			<h2>Recent Work</h2>
-			<div class="row">
+			<h2>My projects</h2>
+			<div class="tabs">
+				<button class="tab-button active" onclick="changeTab('Applications')">Applications</button>
+				<button class="tab-button" onclick="changeTab('DataStructures')">Data Structures</button>
+			</div>
+
+			<div class="row tab-row Applications active">
 				<article class="col-6 col-12-xsmall work-item" data-repo-url="https://github.com/GenaroDS/PingTest">
 					<a href="{% static 'images/fulls/01.jpg' %}" data-url="https://github.com/GenaroDS/PingTest"
 						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest1.jpg' %}" alt="" /></a>
-					<h3>PingTester App</h3>
-					<p>PingTest is a a clean and lightweight application that monitors network performance through
+					<h3>Ping Tester App</h3>
+					<p>A clean and lightweight application that monitors network performance through
 						customizable ping tests, providing real-time system tray updates and statistics.</p>
+				</article>
+
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="{% static 'images/fulls/03.jpg' %}" data-url="https://github.com/GenaroDS/DoublyLinkedList"
+						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest3.jpg' %}" alt="" /></a>
+					<h3>Web Portfolio App</h3>
+					<p>This very portfolio source code.  It's a responsive web application built with Django, HTML, CSS, 
+						and JavaScript. It aims to showcase my work, education and projects.</p>
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/02.jpg' %}"
 						data-url="https://github.com/GenaroDS/VaadinInvetoryStockApp" class="image fit thumb"><img
 							src="{% static 'images/thumbs/tumbtest2.jpg' %}" alt="" /></a>
-					<h3>Web Inventory Stock App</h3></a></h3>
-					<p>An inventory stock responsive web application that features both authorization and authentication
-						for users, as well as full CRUD
-						functionality for managing users and items.</p>
+					<h3>Web Stock Management App</h3></a></h3>
+					<p>A responsive web stock management app built with Vaadin, Spring Security/Data and Hibernate. It has 
+						authorization and authentication for users, and CRUD full functionalities for items.</p>
+				</article>
+
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="{% static 'images/fulls/04.jpg' %}" data-url="https://github.com/GenaroDS/DesktopStockApp"
+						class="image fit thumb"><img src="{% static 'images/thumbs/thumbtest4.jpg' %}" alt="" /></a>
+					<h3>Desktop Stock Management App</h3>
+					<p>A desktop inventory management application built with Java, MySql and 
+						Gluon scenebuilder with fxml files for the GUI. With account creation, 
+						CRUD fuctionality for items.</p>
+				</article>
+
+			</div>
+
+			<div class="row tab-row DataStructures">
+				<article class="col-6 col-12-xsmall work-item" data-repo-url="https://github.com/GenaroDS/PingTest">
+					<a href="{% static 'images/fulls/01.jpg' %}" data-url="https://github.com/GenaroDS/PingTest"
+						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest1.jpg' %}" alt="" /></a>
+					<h3>Doubly Linked List</h3>
+					<p>A doubly linked list built from scratch without libraries. It features sorted 
+						insertion by product code, featuring error handling and console output.</p>
+				</article>
+
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="{% static 'images/fulls/02.jpg' %}"
+						data-url="https://github.com/GenaroDS/VaadinInvetoryStockApp" class="image fit thumb"><img
+							src="{% static 'images/thumbs/tumbtest2.jpg' %}" alt="" /></a>
+					<h3>Binary Search Tree</h3></a></h3>
+					<p>A binary search tree built on Java from scratch without libraries. It features search and 
+						insertion method, and a console print of the tree structure.</p>
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/03.jpg' %}" data-url="https://github.com/GenaroDS/DoublyLinkedList"
 						class="image fit thumb"><img src="{% static 'images/thumbs/tumbtest3.jpg' %}" alt="" /></a>
-					<h3>Doubly Linked List</h3>
-					<p>Doubly linked list built from scratch without libraries, with sorted insertion by product code,
-						featuring error handling and a graphic console output.</p>
+					<h3>Queue</h3>
+					<p>A simple and functional FIFO (First in first out) Queue made from a linked list built from scratch.
+						It features add(enqueue), remove(dequeue), and print(show Queue) methods.
+					</p>
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
 					<a href="{% static 'images/fulls/04.jpg' %}" data-url="https://github.com/GenaroDS/PureJavaStockApp"
 						class="image fit thumb"><img src="{% static 'images/thumbs/thumbtest4.jpg' %}" alt="" /></a>
-					<h3>Java Stock App</h3>
-					<p>A simple desktop inventory stock application using java, MySql relational data
-						and gluon scenebuilder with fxml files for the Graphical Interface</p>
+					<h3>Stack</h3>
+					<p>A simple and functional LIFO (last in first out) stack built from scratch. It features 
+						push(add), pop(delete), peak(see top), and print(show stack) methods.
+					</p>
 				</article>
+				<!-- Your projects related to Data Structures -->
 			</div>
+
 			<ul class="actions">
 				<li><a href="https://github.com/GenaroDS" target="_blank" class="button">View my full portfolio on
 						GitHub</a></li>
@@ -236,7 +281,8 @@
 		</section>
 
 		<!-- Tester -->
-		
+
+
 
 	</div>
 

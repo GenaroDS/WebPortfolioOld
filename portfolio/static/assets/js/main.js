@@ -98,7 +98,7 @@
 
 	// Lightbox gallery.
 	$window.on('load', function () {
-		$('#two').poptrox({
+		$('#projects').poptrox({
 			caption: function ($a) {
 				let repoUrl = $a.attr('data-url');
 				let captionText = $a.next('h3').text();
@@ -264,8 +264,47 @@ $(document).ready(function () {
 		usePopupNav: false,		
 	});
 });
+ 
 
+let tabContents = {
+    'Applications': document.querySelector('.Applications').innerHTML,
+    'DataStructures': document.querySelector('.DataStructures').innerHTML
+};
 
+function changeTab(tabName) {
+    // Get all rows and tab-buttons
+    let rows = document.querySelectorAll('.tab-row');
+    let tabButtons = document.querySelectorAll('.tab-button');
 
-/* TESTER */
+    // Remove the 'active' class from all rows
+    rows.forEach(row => row.classList.remove('active'));
+
+    // Remove the 'active' class from all tab-buttons
+    tabButtons.forEach(tab => tab.classList.remove('active'));
+
+    // Add the 'active' class to the selected tab-button
+    document.querySelector(`[onclick="changeTab('${tabName}')"]`).classList.add('active');
+
+    // Add the 'active' class to the selected row
+    document.querySelector(`.${tabName}`).classList.add('active');
+
+    // Reinitialize Poptrox
+    $('#projects').poptrox({
+        caption: function ($a) {
+            let repoUrl = $a.attr('data-url');
+            let captionText = $a.next('h3').text();
+            return '<a href="' + repoUrl + '" target="_blank" class="button">' + "Open on GitHub" + '</a>';
+        },
+        overlayColor: '#2c2c2c',
+        overlayOpacity: 0.85,
+        popupCloserText: '',
+        popupLoaderText: '',
+        selector: '.work-item a.image',
+        usePopupCaption: true,
+        usePopupDefaultStyling: false,
+        usePopupEasyClose: false,
+        usePopupNav: true,
+        windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+    });
+}
 
