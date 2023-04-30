@@ -141,7 +141,6 @@ document.querySelector(".dropdown-btn").addEventListener("click", function (even
 
 
 
-
 // Smoother animation to my dropdownlist
 document.querySelectorAll(".dropdown-content a").forEach(function (link) {
 	link.addEventListener("click", function (event) {
@@ -186,6 +185,8 @@ function showTooltip() {
 	}, 2000);
 }
 
+// Clipboard
+
 document.querySelectorAll('.click-to-copy').forEach(element => {
 	element.addEventListener('click', function () {
 		let textToCopy = this.textContent;
@@ -199,18 +200,22 @@ document.querySelectorAll('.click-to-copy').forEach(element => {
 		// Show "Copied to clipboard!" message
 		let notification = document.createElement('div');
 		notification.innerText = 'Copied to clipboard!';
-		notification.style.position = 'fixed';
-		notification.style.bottom = '20px';
-		notification.style.right = '20px';
-		notification.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-		notification.style.color = 'white';
-		notification.style.padding = '10px 20px';
-		notification.style.borderRadius = '5px';
+		notification.className = 'notification';
 		document.body.appendChild(notification);
+
+		// After the notification is appended to the document, add the 'show' class
+		setTimeout(function () {
+			notification.classList.add('show');
+		}, 0);
 
 		// Hide the message after 3 seconds
 		setTimeout(function () {
-			document.body.removeChild(notification);
+			// Before removing the notification, remove the 'show' class
+			notification.classList.remove('show');
+
+			setTimeout(function () {
+				document.body.removeChild(notification);
+			}, 500);  // Wait for the transition to complete before removing the notification
 		}, 3000);
 	});
 });
@@ -288,6 +293,7 @@ function changeTab(tabName) {
     // Add the 'active' class to the selected row
     document.querySelector(`.${tabName}`).classList.add('active');
 
+	
     // Reinitialize Poptrox
     $('#projects').poptrox({
         caption: function ($a) {
@@ -307,4 +313,16 @@ function changeTab(tabName) {
         windowMargin: (breakpoints.active('<=small') ? 0 : 50)
     });
 }
+
+
+
+// moving tooltip
+document.querySelectorAll('.tooltip-icon').forEach(item => {
+	item.addEventListener('mousemove', e => {
+	  let tooltip = item.querySelector('::after');
+	  tooltip.style.left = e.pageX + 'px';
+	  tooltip.style.top = e.pageY + 'px';
+	});
+  });
+  
 
