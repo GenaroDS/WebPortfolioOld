@@ -17,13 +17,9 @@ Web Portfolio is a dynamic, lightweight, and personalized web application based 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Original Template: 
-Strata by HTML5 UP, free for personal and commercial use under the CCA 3.0 license.
 
 ## License
-This project is licensed under the Creative Commons Attribution 3.0 Unported License (CC BY 3.0), which allows for both personal and commercial use. Please see the LICENSE file for more details. The modifications to the original Strata template by HTML5 UP are made available under the same license.
+This project is licensed under the Creative Commons Attribution 3.0 Unported License (CC BY 3.0), which allows for both personal and commercial use. Please see the LICENSE file for more details. The modifications to the original Strata template by HTML5 UP are made available under the same license.  
+Original template: Strata by HTML5 UP, free for personal and commercial use under the CCA 3.0 license.
 
-## Credits
-Strata Template - HTML5 UP
-Django Framework - Django
 
