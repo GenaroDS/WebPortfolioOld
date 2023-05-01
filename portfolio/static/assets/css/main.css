@@ -2371,7 +2371,6 @@ dl {
 	z-index: 10;
     border-radius: 6px;
     position: absolute;
-    
     bottom: 125%; /* Position the tooltip above the icon */
     margin-left: 0px; /* Center the tooltip */
     opacity: 0;
@@ -3601,18 +3600,25 @@ body.is-touch .poptrox-popup .closer {
 	cursor: pointer;
 	padding: 10px 12px;
 	font-size: 16px;
+	transition: box-shadow 0.3s ease; /* Added transition for box-shadow */
+}
+
+.dropdown-btn:hover {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25); /* Added box-shadow on hover */
 }
 
 .dropdown-content {
-	display: none;
+	max-height: 0; 
 	opacity: 0;
 	position: absolute;
 	background-color: #f9f9f9;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
-	transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease, max-height 0.3s ease; 
+	overflow: hidden;
 }
+
 
 .dropdown-content a {
 	color: black;
@@ -3628,7 +3634,7 @@ body.is-touch .poptrox-popup .closer {
 
 .dropdown-content.show {
 	opacity: 1;
-	display: block;
+	max-height: 2000px; /* Set a max-height large enough to fit your content when dropdown is shown */
 }
 
 

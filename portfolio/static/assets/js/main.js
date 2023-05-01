@@ -125,23 +125,17 @@
 document.querySelector(".dropdown-btn").addEventListener("click", function (event) {
 	event.stopPropagation(); // Prevent the click event from bubbling up to the document
 	const content = document.querySelector(".dropdown-content");
-	content.style.display = content.style.display === "block" ? "none" : "block";
+	content.classList.toggle("show");
 });
 
 document.addEventListener("click", function () {
 	const content = document.querySelector(".dropdown-content");
-	content.style.display = "none";
+	if(content.classList.contains('show')){
+        content.classList.remove('show');
+    }
 });
 
-document.querySelector(".dropdown-btn").addEventListener("click", function (event) {
-	event.stopPropagation();
-	const content = document.querySelector(".dropdown-content");
-	content.classList.toggle("show");
-});
-
-
-
-// Smoother animation to my dropdownlist
+// Smoother animation to my dropdown list
 document.querySelectorAll(".dropdown-content a").forEach(function (link) {
 	link.addEventListener("click", function (event) {
 		event.preventDefault();
@@ -257,8 +251,6 @@ document.querySelector('.certificate-container').addEventListener('scroll', upda
 window.addEventListener('resize', updateArrowsVisibility);
 window.addEventListener('DOMContentLoaded', updateArrowsVisibility);
 
-
-
 // Certificates popup poptrox
 
 $(document).ready(function () {
@@ -313,16 +305,4 @@ function changeTab(tabName) {
         windowMargin: (breakpoints.active('<=small') ? 0 : 50)
     });
 }
-
-
-
-// moving tooltip
-document.querySelectorAll('.tooltip-icon').forEach(item => {
-	item.addEventListener('mousemove', e => {
-	  let tooltip = item.querySelector('::after');
-	  tooltip.style.left = e.pageX + 'px';
-	  tooltip.style.top = e.pageY + 'px';
-	});
-  });
-  
 
