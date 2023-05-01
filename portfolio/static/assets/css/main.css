@@ -2802,12 +2802,13 @@ input[type="button"]:disabled,
 }
 
 .work-item h3 {
-	font-size: 1em;
+	font-size: 1.05em;
 	margin: 0 0 0.5em 0;
+	font-weight: 300;
 }
 
 .work-item p {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	line-height: 1.5em;
 	margin: 0;
 }
@@ -3075,15 +3076,17 @@ input[type="button"]:disabled,
 }
 
 .poptrox-popup .caption a.button {
-    display: inline-block;
+    display: inline-flex; /* Changed from inline-block to inline-flex */
+    justify-content: center; /* Align horizontally in the center */
+    align-items: center; /* Align vertically in the center */
     margin: 0 auto;
     padding: 0.1em 1em;
-    line-height: 1.2;
     text-align: center;
-    vertical-align: top;
     position: relative;
-    top: -9px; /* Move the button 20 pixels up */
+    top: -9px;
+	font-size: 1em;
 }
+
 
 .poptrox-popup .nav-next,
 .poptrox-popup .nav-previous {
@@ -3915,17 +3918,15 @@ body.is-touch .poptrox-popup .closer {
 
 }
 
-
 .tab-button {
     cursor: pointer;
     background: transparent;
     border: none;
     padding: 10px;
 	color: #787878;
-
 	line-height: 0.5em;
 	margin: 0 0 1em 0;
-	font-size: 0.95em;
+	font-size: 1.05em;
     margin-left: 0; /* Remove left margin */
     margin-bottom: 20px; /* Add space below the tabs */
     border-radius: 8px 8px 0 0; /* Round only top corners */
