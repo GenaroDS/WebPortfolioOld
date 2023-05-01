@@ -5,12 +5,12 @@ Web Portfolio is a dynamic, lightweight, and personalized web application based 
 (Include screenshots of your portfolio site here)
 
 ## Changes from Original Template
-Multiple Tab Project Showcase: Added x separate tabs for showcasing different categories of projects, offering a more organized view of the portfolio.
-Certificate Scrolling: Added a scrolling functionality for certificates.
-Smooth Navigation: Implemented smooth navigation and transitions for a seamless user experience.
-Clipboard Functionality: Added functionality to copy email and other contact information directly to the clipboard.
-Dropdown Menu: Added a dropdown menu for better navigation.
-Contact Me Feature: Implemented a functional anti-spam email sender in the "Contact Me" section for secure and reliable communication.
+Multiple Tab Project Showcase: Added x separate tabs for showcasing different categories of projects, offering a more organized view of the portfolio.  
+Certificate Scrolling: Added a scrolling functionality for certificates.  
+Smooth Navigation: Implemented smooth navigation and transitions for a seamless user experience.  
+Clipboard Functionality: Added functionality to copy email and other contact information directly to the clipboard.  
+Dropdown Menu: Added a dropdown menu for better navigation.  
+Contact Me Feature: Implemented a functional anti-spam email sender in the "Contact Me" section for secure and reliable communication.  
 
 
 ## Contributing
