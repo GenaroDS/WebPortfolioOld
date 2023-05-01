@@ -4,7 +4,10 @@ Web Portfolio is a dynamic, lightweight, and personalized web application based 
 <details>
 <summary><h1>Screenshots</h1></summary>
 
+About me tab:
 ![Screenshot 1](screenshots/01.png)
+  
+Education & certifications tab:
 
 ![Screenshot 2](screenshots/02.png)
 
