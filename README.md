@@ -11,6 +11,7 @@ Web Portfolio is a dynamic, lightweight, and personalized web application based 
 * Clipboard Functionality: Added functionality to copy email and other contact information directly to the clipboard.  
 * Dropdown Menu: Added a dropdown menu for better navigation.  
 * Contact Me Feature: Implemented a functional anti-spam email sender in the "Contact Me" section for secure and reliable communication.  
+* Education and Courses cards: Created card layouts to display educational qualifications and courses.
 
 
 ## Contributing
