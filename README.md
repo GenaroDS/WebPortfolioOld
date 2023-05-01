@@ -1,5 +1,5 @@
 # Web Portfolio
-Web Portfolio is a dynamic, lightweight, and personalized web application based on the Django framework that showcases your projects and skills. This project, a modification of the Strata template by HTML5 UP, leverages the power of Django to create a customizable, data-driven portfolio page. Viewers can see my projects, skills, certificates, and other details to the application, which are then dynamically rendered on the portfolio page.  
+Web Portfolio is a dynamic, lightweight, and personalized web application based on the Django framework that showcases your projects and skills. This project, a modification of the Strata template by HTML5 UP, leverages the power of Django to create a customizable, data-driven portfolio page. Visitors can see my projects, skills, certificates, and other details to the application, which are then dynamically rendered on the portfolio page.  
 
 <details>
 <summary><h1>Screenshots</h1></summary>
