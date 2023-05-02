@@ -3849,9 +3849,10 @@ body.is-touch .poptrox-popup .closer {
 
 .tooltip-icon::after {
     content: attr(data-tooltip);
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 125%;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
     white-space: nowrap;
     z-index: 10;
     padding: 10px;
@@ -3864,11 +3865,13 @@ body.is-touch .poptrox-popup .closer {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
+    margin-left: 10px; /* some space between the icon and the tooltip */
 }
 
 .tooltip-icon:hover::after {
     opacity: 1;
 }
+
 
 
 /* Contact me row rreplacement */
