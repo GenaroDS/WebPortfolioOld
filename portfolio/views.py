@@ -1,5 +1,4 @@
-from django.shortcuts import render
+from bakery.views import BuildableTemplateView
 
-# Create your views here.
-def index(request):
-    return render(request, 'index.html')
+class IndexView(BuildableTemplateView):
+    template_name = 'index.html'
