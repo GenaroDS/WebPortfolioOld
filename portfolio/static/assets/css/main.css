@@ -2842,6 +2842,7 @@ input[type="button"]:disabled,
 	height: 100%;
 	left: 0;
 	padding: 8em 4em;
+	padding-bottom: 6em;
 	position: fixed;
 	text-align: right;
 	top: 0;
@@ -3334,6 +3335,7 @@ body.is-touch .poptrox-popup .closer {
 		top: auto;
 		width: 100%;
 		display: block;
+		
 	}
 
 	#header h1 {
