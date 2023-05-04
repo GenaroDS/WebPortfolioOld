@@ -2272,24 +2272,32 @@ input[type="radio"]+label:before {
 	display: block;
 	margin: 0 0 2em 0;
 	width: 100%;
+	
 }
 
 .image.fit img {
 	width: 100%;
+	
 }
 
 .image.avatar {
 	border-radius: 100%;
+	
 }
 
 .image.avatar:before {
 	display: none;
+	
 }
 
 .image.avatar img {
 	border-radius: 100%;
 	width: 100%;
+	
 }
+
+
+
 
 /* List */
 
@@ -3961,3 +3969,5 @@ body.is-touch .poptrox-popup .closer {
 	box-shadow: 0px -4px 10px rgba(37, 37, 37, 0.125);
 	transition: transform 0.3s;
 }
+
+
