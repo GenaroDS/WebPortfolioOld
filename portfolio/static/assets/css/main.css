@@ -139,6 +139,7 @@ table {
 
 body {
 	-webkit-text-size-adjust: none;
+	
 }
 
 mark {
@@ -391,6 +392,8 @@ pre code {
 		width: 100% !important;
 		max-width: 100% !important;
 	}
+
+
 
 }
 
@@ -1139,6 +1142,7 @@ pre code {
 }
 
 @media screen and (max-width: 980px) {
+
 
 	.row {
 		display: flex;
@@ -2837,7 +2841,7 @@ input[type="button"]:disabled,
 	background-image: url("images/overlay.png"), url("../../images/realbg.jpg");
 	background-position: top left, top left;
 	background-repeat: repeat, no-repeat;
-	background-size: auto, 154%;
+	background-size: auto, 250%;
 	color: rgba(255, 255, 255, 0.5);
 	height: 100%;
 	left: 0;
@@ -3265,7 +3269,7 @@ body.is-touch .poptrox-popup .closer {
 	#header {
 		padding: 6em 3em 3em 3em;
 		width: 30%;
-		background-size: auto, 235%;
+		background-size: auto, 380%;
 	}
 
 	#header h1 {
@@ -3326,8 +3330,9 @@ body.is-touch .poptrox-popup .closer {
 
 	#header {
 		background-attachment: scroll;
-		background-position: top left, center center;
-		background-size: auto, cover;
+		background-position: none, top left;
+		background-image: url("images/overlaysuperbig.png"), url("../../images/realbglong.jpg");
+		background-size: 200%;
 		left: auto;
 		padding: 6em 4em;
 		position: relative;
@@ -3351,16 +3356,18 @@ body.is-touch .poptrox-popup .closer {
 	#footer {
 		background-attachment: scroll;
 		background-color: #1f1815;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-		background-position: top left, bottom center;
+		background-image: url("images/overlaysuperbig.png"), url("../../images/realbglong.jpg");
+		background-position: top, top right;
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
 		bottom: auto;
 		left: auto;
 		padding: 4em 4em 6em 4em;
-		position: relative;
+		padding-bottom: 3em;
+		position:absolute;
 		text-align: center;
 		width: 100%;
+		
 	}
 
 	#footer .icons {
@@ -3432,6 +3439,9 @@ body.is-touch .poptrox-popup .closer {
 
 	#header {
 		padding: 2.25em 1.5em;
+		background-size: 155%;
+		background-image: url("images/overlaysuperbig.png"), url("../../images/realbg.jpg");
+		background-position: top left, top left;
 	}
 
 	#header h1 {
@@ -3442,6 +3452,7 @@ body.is-touch .poptrox-popup .closer {
 
 	#footer {
 		padding: 2.25em 1.5em;
+
 	}
 
 	/* Main */
@@ -3472,11 +3483,13 @@ body.is-touch .poptrox-popup .closer {
 /* XSmall */
 
 @media screen and (max-width: 480px) {
-
+	
 	/* Header */
 
 	#header {
 		padding: 4.5em 1.5em;
+		background-size: 240%;
+		background-image: url("images/overlaysuperbig.png"), url("../../images/realbg.jpg");
 	}
 
 	#header h1 br {
@@ -3488,7 +3501,7 @@ body.is-touch .poptrox-popup .closer {
 	#footer .copyright li {
 		border-left-width: 0;
 		display: block;
-		line-height: 2.25em;
+		line-height: 2.2em;
 		margin-left: 0;
 		padding-left: 0;
 	}
