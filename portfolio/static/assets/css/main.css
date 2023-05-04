@@ -3957,5 +3957,7 @@ body.is-touch .poptrox-popup .closer {
 	box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.075);
 }
 
-
-
+.tabs :hover{
+	box-shadow: 0px -4px 10px rgba(37, 37, 37, 0.125);
+	transition: transform 0.3s;
+}
